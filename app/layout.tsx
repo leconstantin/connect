@@ -3,7 +3,7 @@ import './globals.css';
 
 import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
-import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeProvider } from '@/components/theme/theme-provider';
 
 export const metadata: Metadata = {
   title: 'Rwanda Connect',
