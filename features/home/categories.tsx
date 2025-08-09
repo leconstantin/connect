@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { ImageZoom } from '@/components/custom/image-zoom';
 import NavItem from '@/components/custom/nav-item';
 import { NavSearchCommand } from '@/components/layout/nav-search';
 import { ThemeToggleButton } from '@/components/theme/theme-toggle-button';
@@ -39,13 +40,15 @@ export default function CategoriesSection() {
       <div className="flex items-center gap-2 px-4 transition-all duration-1000 ease-in sm:px-6">
         {showLogo && (
           <Link href="/">
-            <Image
-              alt="Rwanda Flag"
-              className="object-cover"
-              height={35}
-              src={Flag}
-              width={40}
-            />
+            <ImageZoom>
+              <Image
+                alt="Rwanda Flag"
+                className="object-cover"
+                height={35}
+                src={Flag}
+                width={40}
+              />
+            </ImageZoom>
           </Link>
         )}
         <ScrollArea className="w-[100vw] overflow-hidden lg:w-full">

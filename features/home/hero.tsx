@@ -2,6 +2,7 @@ import { StarIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BlurVignette } from '@/components/custom/blur-vignette';
+import { ImageZoom } from '@/components/custom/image-zoom';
 import { TextEffect } from '@/components/custom/text-effect';
 import TextPressure from '@/components/custom/text-pressure';
 import { SearchCommand } from '@/components/layout/search';
@@ -40,7 +41,9 @@ export default function HeroSection() {
         <div className="absolute top-0 z-10 w-full">
           <div className="flex items-center justify-between px-6 py-4">
             <Link className="flex items-center gap-1" href="/">
-              <Image alt="Rwanda Flag" height={30} src={Flag} width={30} />
+              <ImageZoom>
+                <Image alt="Rwanda Flag" height={30} src={Flag} width={30} />
+              </ImageZoom>
               <TextEffect
                 className="hidden font-medium text-white text-xl tracking-tighter md:flex lg:text-2xl"
                 per="char"

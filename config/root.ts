@@ -309,3 +309,41 @@ export const footerLinks: TFooterLink[] = [
     ],
   },
 ];
+
+export const testimonials = [
+  {
+    quote:
+      "From the moment I arrived, everything was perfectly arranged. The warm welcome and local insights made my trip unforgettable.",
+    name: "Sarah Chen",
+    designation: "Visitor from Singapore",
+    src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    quote:
+      "Exploring Rwanda was a dream come true. The team made sure I felt safe, connected, and inspired every single day.",
+    name: "Michael Rodriguez",
+    designation: "Traveler from USA",
+    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    quote:
+      "I discovered places I’d never find on my own. The local recommendations and cultural experiences were truly priceless.",
+    name: "Emily Watson",
+    designation: "Tourist from UK",
+    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    quote:
+      "Every detail was taken care of — from airport pickup to the most breathtaking excursions. I felt at home in Rwanda.",
+    name: "James Kim",
+    designation: "Business Visitor from South Korea",
+    src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    quote:
+      "I was amazed by the hospitality and professionalism. Rwanda’s beauty and your guidance made this my best travel experience.",
+    name: "Lisa Thompson",
+    designation: "Traveler from Canada",
+    src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];

@@ -1,6 +1,7 @@
 import CardsList from '@/features/home/cards-list';
 import CategoriesSection from '@/features/home/categories';
 import HeroSection from '@/features/home/hero';
+import TestimonialsSection from '@/features/home/testimonials';
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <CategoriesSection />
         <CardsList />
       </main>
-      <div className="h-screen">jdhjfdhjf</div>
+      <TestimonialsSection />
     </>
   );
 }
