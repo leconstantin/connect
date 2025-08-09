@@ -5,7 +5,7 @@ import type { forYou } from '@/config/root';
 export default function CardItem({ item }: { item: (typeof forYou)[0] }) {
   return (
     <Link
-      className="group relative w-full space-y-3 py-3 md:px-2.5"
+      className="group relative w-full space-y-3 rounded-sm p-2 transition duration-200 hover:shadow-sm"
       href="/"
       key={item.title}
     >

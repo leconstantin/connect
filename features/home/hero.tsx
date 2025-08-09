@@ -53,7 +53,10 @@ export default function HeroSection() {
               </TextEffect>
             </Link>
             <div>
-              <Button className="text-white" variant={'ghost'}>
+              <Button
+                className="text-white hover:bg-background/50 2xl:text-lg"
+                variant={'ghost'}
+              >
                 Sign in
               </Button>
             </div>
