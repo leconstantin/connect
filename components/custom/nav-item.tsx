@@ -10,15 +10,17 @@ export default function NavItem({
 }) {
   return (
     <Button
-      className={cn(
-        'rounded-sm border-0 text-sm shadow-none ring-0',
-        active ? 'text-primary' : 'text-muted-foreground'
-      )}
+      className={cn('group rounded-sm border-0 text-sm shadow-none ring-0')}
       key={item.label}
       size={'sm'}
-      variant={active ? 'secondary' : 'ghost'}
+      variant={active ? 'default' : 'ghost'}
     >
-      <item.icon />
+      <item.icon
+        className={cn(
+          ' group-hover:text-primary',
+          !active && 'text-muted-foreground'
+        )}
+      />
       <span>{item.label}</span>
     </Button>
   );

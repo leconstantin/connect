@@ -31,7 +31,7 @@ export default function CategoriesSection() {
   return (
     <nav
       className={cn(
-        'w-full gap-4 border-border border-b bg-transparent py-2',
+        'sticky top-0 z-50 w-full gap-4 bg-transparent py-2',
         showLogo &&
           'bg-background/40 backdrop-blur-lg supports-backdrop-blur:bg-background/90'
       )}
@@ -60,9 +60,11 @@ export default function CategoriesSection() {
           </div>
           <ScrollBar className="h-0 w-0" orientation="horizontal" />
         </ScrollArea>
+        <div className="ml-auto flex items-center gap-1">
+          {showSearch && <NavSearchCommand />}
 
-        {showSearch && <NavSearchCommand />}
-        <ThemeToggleButton className="hidden rounded-full md:block" />
+          <ThemeToggleButton className="hidden rounded-full md:flex" />
+        </div>
       </div>
     </nav>
   );

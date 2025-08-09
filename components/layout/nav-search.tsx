@@ -67,10 +67,10 @@ export function NavSearchCommand({ ...props }: DialogProps) {
   return (
     <>
       <Button
-        className="rounded-full text-muted-foreground"
+        className="rounded-full"
         onClick={() => setOpen(true)}
         size={'icon'}
-        variant="outline"
+        variant="ghost"
         {...props}
       >
         <SearchIcon className="size-4" />

@@ -71,13 +71,13 @@ export function SearchCommand({ ...props }: DialogProps) {
   return (
     <>
       <Button
-        className="relative h-9 w-72 justify-start rounded-full border-0 bg-[0a0a0a]/40 text-sm text-white shadow-none backdrop-blur-sm hover:bg-transparent hover:text-white/90 supports-backdrop-blur:bg-[0a0a0a]/80 sm:min-w-sm lg:min-h-12 lg:min-w-md dark:border"
+        className="relative h-9 w-72 justify-start rounded-full border-0 bg-[0a0a0a]/40 text-sm text-white shadow-none backdrop-blur-sm hover:bg-transparent hover:text-white/90 supports-backdrop-blur:bg-[0a0a0a]/80 sm:min-w-sm lg:min-h-12 lg:min-w-md 2xl:h-14 2xl:min-w-2xl dark:border"
         onClick={() => setOpen(true)}
         variant="outline"
         {...props}
       >
         <Search className="size-4" />
-        <TextLoop className="font-mono text-sm">
+        <TextLoop className="font-normal text-sm 2xl:text-xl">
           {placeholders.map((placeholder) => (
             <span key={placeholder}>{placeholder}</span>
           ))}

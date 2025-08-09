@@ -56,7 +56,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="flex w-full flex-col items-center justify-center gap-10 text-center text-white lg:max-w-[50rem]">
+        <div className="flex w-full flex-col items-center justify-center gap-10 text-center text-white lg:max-w-3xl 2xl:max-w-6xl">
           <div className="relative w-full">
             <TextPressure
               alpha={false}
@@ -72,7 +72,7 @@ export default function HeroSection() {
             />
           </div>
 
-          <p className="mx-auto inline-block text-balance align-top font-normal text-white text-xl">
+          <p className="mx-auto inline-block text-balance align-top font-normal text-white text-xl xl:text-2xl 2xl:text-3xl">
             <span className="font-medium text-blue-300">Visiting Rwanda</span>{' '}
             or making it home?{' '}
             <StarIcon className="inline size-3 fill-yellow-300 text-yellow-300" />{' '}
