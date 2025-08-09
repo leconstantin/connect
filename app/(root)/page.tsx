@@ -1,11 +1,11 @@
-import { ThemeToggleButton } from '@/components/theme/theme-toggle-button';
-import { ModeSwitcher } from '@/components/ui/mode-switcher';
+import CategoriesSection from '@/features/home/categories';
+import HeroSection from '@/features/home/hero';
 
 export default function Home() {
   return (
-    <div className="p-20">
-      <ModeSwitcher />
-      <ThemeToggleButton start="bottom-left" variant="circle-blur" />
-    </div>
+    <>
+      <HeroSection />
+      <CategoriesSection />
+    </>
   );
 }
