@@ -12,3 +12,8 @@ export type Tservices = {
     Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
   >;
 };
+
+export type TFooterLink = {
+  title: string;
+  links: { name: string; href: string; external: boolean }[];
+};

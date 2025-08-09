@@ -9,7 +9,7 @@ import {
   UserIcon,
   UtensilsIcon,
 } from "lucide-react";
-import type { ImageItem, Tservices } from "@/types";
+import type { ImageItem, TFooterLink, Tservices } from "@/types";
 
 export const citiesInRwanda = [
   { name: "Kigali", province: "Kigali City" },
@@ -219,5 +219,93 @@ export const forYou = [
       district: "",
       village: "",
     },
+  },
+];
+
+export const footerLinks: TFooterLink[] = [
+  {
+    title: "Newsroom",
+    links: [
+      { name: "Latest News", href: "/", external: false },
+      { name: "Top Stories", href: "/", external: false },
+      { name: "Editor's Picks", href: "/", external: false },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { name: "About Us", href: "/", external: false },
+      { name: "Careers", href: "/", external: false },
+      { name: "Press", href: "/", external: false },
+      { name: "Contact", href: "/", external: false },
+    ],
+  },
+  {
+    title: "For Business",
+    links: [
+      { name: "Advertise with Us", href: "/", external: false },
+      { name: "Media Kit", href: "/", external: false },
+      { name: "Partner with Us", href: "/", external: false },
+    ],
+  },
+  {
+    title: "More",
+    links: [
+      { name: "Newsletter", href: "/", external: false },
+      { name: "Mobile App", href: "/", external: false },
+      { name: "RSS Feeds", href: "/", external: false },
+      { name: "Help Center", href: "/", external: false },
+    ],
+  },
+  {
+    title: "Terms & Policies",
+    links: [
+      { name: "Terms of Use", href: "/", external: false },
+      { name: "Privacy Policy", href: "/", external: false },
+      { name: "Cookie Policy", href: "/", external: false },
+      { name: "Editorial Policy", href: "/", external: false },
+    ],
+  },
+  {
+    title: "Safety",
+    links: [
+      { name: "Fact-Checking", href: "/", external: false },
+      { name: "Corrections", href: "/", external: false },
+      { name: "Trust & Transparency", href: "/", external: false },
+    ],
+  },
+  {
+    title: "Follow Us",
+    links: [
+      { name: "Facebook", href: "/", external: true },
+      { name: "Twitter", href: "/", external: true },
+      { name: "Instagram", href: "/", external: true },
+      { name: "YouTube", href: "/", external: true },
+    ],
+  },
+  {
+    title: "Sections",
+    links: [
+      { name: "Politics", href: "/", external: false },
+      { name: "Business", href: "/", external: false },
+      { name: "Technology", href: "/", external: false },
+      { name: "Health", href: "/", external: false },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { name: "Media Resources", href: "/", external: false },
+      { name: "Author Guidelines", href: "/", external: false },
+      { name: "News Archive", href: "/", external: false },
+    ],
+  },
+  {
+    title: "Community",
+    links: [
+      { name: "Events", href: "/", external: false },
+      { name: "Reader Stories", href: "/", external: false },
+      { name: "Submit News", href: "/", external: false },
+    ],
   },
 ];
