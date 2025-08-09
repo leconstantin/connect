@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface TextPressureProps {
   text?: string;
@@ -70,10 +70,14 @@ const TextPressure: React.FC<TextPressureProps> = ({
     window.addEventListener('touchmove', handleTouchMove, { passive: false });
 
     if (containerRef.current) {
-      const { left, top, width, height } =
-        containerRef.current.getBoundingClientRect();
-      mouseRef.current.x = left + width / 2;
-      mouseRef.current.y = top + height / 2;
+      const {
+        left,
+        top,
+        width: containerWidth,
+        height: containerHeight,
+      } = containerRef.current.getBoundingClientRect();
+      mouseRef.current.x = left + containerWidth / 2;
+      mouseRef.current.y = top + containerHeight / 2;
       cursorRef.current.x = mouseRef.current.x;
       cursorRef.current.y = mouseRef.current.y;
     }
@@ -84,7 +88,7 @@ const TextPressure: React.FC<TextPressureProps> = ({
     };
   }, []);
 
-  const setSize = () => {
+  const setSize = useCallback(() => {
     if (!(containerRef.current && titleRef.current)) return;
 
     const { width: containerW, height: containerH } =
@@ -107,7 +111,7 @@ const TextPressure: React.FC<TextPressureProps> = ({
         setLineHeight(yRatio);
       }
     });
-  };
+  }, [chars.length, minFontSize, scale]);
 
   useEffect(() => {
     setSize();
@@ -211,7 +215,9 @@ const TextPressure: React.FC<TextPressureProps> = ({
             className="inline-block"
             data-char={char}
             key={i}
-            ref={(el) => (spansRef.current[i] = el)}
+            ref={(el) => {
+              spansRef.current[i] = el;
+            }}
           >
             {char}
           </span>
