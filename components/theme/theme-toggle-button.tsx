@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes';
 import React from 'react';
 
 import { Button } from '@/components/ui/button';
-
+import { cn } from '@/lib/utils';
 import {
   type AnimationStart,
   type AnimationVariant,
@@ -17,6 +17,7 @@ interface ThemeToggleAnimationProps {
   start?: AnimationStart;
   showLabel?: boolean;
   url?: string;
+  className?: string;
 }
 
 export function ThemeToggleButton({
@@ -24,6 +25,7 @@ export function ThemeToggleButton({
   start = 'top-left',
   showLabel = false,
   url = '',
+  className = '',
 }: ThemeToggleAnimationProps) {
   const { theme, setTheme } = useTheme();
 
@@ -68,7 +70,7 @@ export function ThemeToggleButton({
 
   return (
     <Button
-      className="group relative h-9 w-9 p-0"
+      className={cn('group relative h-9 w-9 p-0', className)}
       name="Theme Toggle Button"
       onClick={toggleTheme}
       size="icon"

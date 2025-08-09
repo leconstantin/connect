@@ -71,19 +71,20 @@ export default function HeroSection() {
               width={true}
             />
           </div>
+
           <p className="mx-auto inline-block text-balance align-top font-normal text-white text-xl">
-            Whether you're{' '}
-            <span className="font-medium text-blue-300">visiting Rwanda</span>{' '}
-            for the first time or settling in long-term.{' '}
-            <StarIcon className="inline size-4 fill-yellow-300 text-yellow-300" />{' '}
-            We&apos;re here to make your{' '}
+            <span className="font-medium text-blue-300">Visiting Rwanda</span>{' '}
+            or making it home?{' '}
+            <StarIcon className="inline size-3 fill-yellow-300 text-yellow-300" />{' '}
+            We help make your{' '}
             <span className="font-medium text-yellow-300">journey easier</span>.
-            Discover trusted local services, explore unique destinations, and{' '}
+            Find trusted services and{' '}
             <span className="font-medium text-green-300">
               connect with communities
-            </span>{' '}
-            that make Rwanda truly special.
+            </span>
+            .
           </p>
+
           <SearchCommand />
         </div>
       </div>

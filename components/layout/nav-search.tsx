@@ -1,11 +1,10 @@
 'use client';
 
 import type { DialogProps } from '@radix-ui/react-dialog';
-import { Laptop, MapPinIcon, Moon, Search, Sun } from 'lucide-react';
+import { Laptop, MapPinIcon, Moon, SearchIcon, Sun } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import React from 'react';
-import { TextLoop } from '@/components/custom/text-loop';
 import { Button } from '@/components/ui/button';
 import {
   CommandDialog,
@@ -17,8 +16,6 @@ import {
   CommandSeparator,
 } from '@/components/ui/command';
 import { citiesInRwanda } from '@/config/root';
-import { useIsMac } from '@/hooks/use-is-mac';
-import { cn } from '@/lib/utils';
 
 const placeholders = [
   'Search places in Rwanda...',
@@ -27,9 +24,8 @@ const placeholders = [
   'Explore Rwanda...',
 ];
 
-export function SearchCommand({ ...props }: DialogProps) {
+export function NavSearchCommand({ ...props }: DialogProps) {
   const router = useRouter();
-  const isMac = useIsMac();
   const [open, setOpen] = React.useState(false);
   const { setTheme } = useTheme();
   const [placeholderIndex, setPlaceholderIndex] = React.useState(0);
@@ -71,26 +67,13 @@ export function SearchCommand({ ...props }: DialogProps) {
   return (
     <>
       <Button
-        className="relative h-9 w-72 justify-start rounded-full border-0 bg-[0a0a0a]/40 text-sm text-white shadow-none backdrop-blur-sm hover:bg-transparent hover:text-white/90 supports-backdrop-blur:bg-[0a0a0a]/80 sm:min-w-sm lg:min-h-12 lg:min-w-md dark:border"
+        className="rounded-full text-muted-foreground"
         onClick={() => setOpen(true)}
+        size={'icon'}
         variant="outline"
         {...props}
       >
-        <Search className="size-4" />
-        <TextLoop className="font-mono text-sm">
-          {placeholders.map((placeholder) => (
-            <span key={placeholder}>{placeholder}</span>
-          ))}
-        </TextLoop>
-
-        <div className="ml-auto hidden gap-1 sm:flex">
-          <CommandMenuKbd className="bg-transparent text-white">
-            {isMac ? '⌘' : 'Ctrl'}
-          </CommandMenuKbd>
-          <CommandMenuKbd className="aspect-square bg-transparent text-white">
-            K
-          </CommandMenuKbd>
-        </div>
+        <SearchIcon className="size-4" />
       </Button>
       <CommandDialog className="rounded-lg" onOpenChange={setOpen} open={open}>
         <CommandInput placeholder={placeholders[placeholderIndex]} />
@@ -130,17 +113,5 @@ export function SearchCommand({ ...props }: DialogProps) {
         </CommandList>
       </CommandDialog>
     </>
-  );
-}
-
-function CommandMenuKbd({ className, ...props }: React.ComponentProps<'kbd'>) {
-  return (
-    <kbd
-      className={cn(
-        "pointer-events-none flex h-5 select-none items-center justify-center gap-1 rounded border bg-background px-1 font-medium font-sans text-[0.7rem] text-muted-foreground [&_svg:not([class*='size-'])]:size-3",
-        className
-      )}
-      {...props}
-    />
   );
 }

@@ -14,7 +14,7 @@ import bImg from "@/public/users/b.jpeg";
 import cImg from "@/public/users/c.jpeg";
 import dImg from "@/public/users/d.png";
 import eImg from "@/public/users/e.png";
-import type { ImageItem } from "@/types";
+import type { ImageItem, Tservices } from "@/types";
 export const avatars = [
   {
     imageUrl: aImg,
@@ -56,19 +56,32 @@ export const citiesInRwanda = [
   { name: "Ngoma", province: "Eastern Province" },
   { name: "Bugesera", province: "Eastern Province" },
 ];
-export const services = [
+export const services: Tservices[] = [
   {
-    name: "For you",
+    label: "For you",
+    link: "/",
     icon: UserIcon,
   },
-  { name: "Government Services", icon: LandmarkIcon },
-  { name: "Tourism & Travel", icon: MapPinIcon },
-  { name: "Business Services", icon: BriefcaseIcon },
-  { name: "Healthcare", icon: HeartPulseIcon },
-  { name: "Education", icon: GraduationCapIcon },
-  { name: "Restaurants & Food", icon: UtensilsIcon },
-  { name: "Rwanda Media", icon: NewspaperIcon },
-  { name: "E-Commerce", icon: ShoppingCartIcon },
+  {
+    label: "Government Services",
+    link: "/government-services",
+    icon: LandmarkIcon,
+  },
+  { label: "Tourism & Travel", link: "/tourism-travel", icon: MapPinIcon },
+  {
+    label: "Business Services",
+    link: "/business-services",
+    icon: BriefcaseIcon,
+  },
+  { label: "Healthcare", link: "/healthcare", icon: HeartPulseIcon },
+  { label: "Education", link: "/education", icon: GraduationCapIcon },
+  {
+    label: "Restaurants & Food",
+    link: "/restaurants-food",
+    icon: UtensilsIcon,
+  },
+  { label: "Rwanda Media", link: "/rwanda-media", icon: NewspaperIcon },
+  { label: "E-Commerce", link: "/e-commerce", icon: ShoppingCartIcon },
 ];
 
 export const defaultImages: ImageItem[] = [
@@ -233,5 +246,40 @@ export const forYou = [
       district: "",
       village: "",
     },
+  },
+];
+
+export const navItems = [
+  {
+    label: "Overview",
+    link: "/author",
+  },
+  {
+    label: "Editor",
+    link: "/author/editor",
+  },
+  {
+    label: "Media",
+    link: "/author/media",
+  },
+  {
+    label: "Activity",
+    link: "/author/activity",
+  },
+  {
+    label: "Chat",
+    link: "/author/chat",
+  },
+  {
+    label: "Analytics",
+    link: "/author/analytics",
+  },
+  {
+    label: "Support",
+    link: "/author/support",
+  },
+  {
+    label: "Settings",
+    link: "/author/settings",
   },
 ];
