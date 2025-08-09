@@ -9,34 +9,7 @@ import {
   UserIcon,
   UtensilsIcon,
 } from "lucide-react";
-import aImg from "@/public/users/a.jpeg";
-import bImg from "@/public/users/b.jpeg";
-import cImg from "@/public/users/c.jpeg";
-import dImg from "@/public/users/d.png";
-import eImg from "@/public/users/e.png";
 import type { ImageItem, Tservices } from "@/types";
-export const avatars = [
-  {
-    imageUrl: aImg,
-    alt: "person 1",
-  },
-  {
-    imageUrl: bImg,
-    alt: "person 2",
-  },
-  {
-    imageUrl: cImg,
-    alt: "person 3",
-  },
-  {
-    imageUrl: dImg,
-    alt: "person 4",
-  },
-  {
-    imageUrl: eImg,
-    alt: "person 5",
-  },
-];
 
 export const citiesInRwanda = [
   { name: "Kigali", province: "Kigali City" },
@@ -246,40 +219,5 @@ export const forYou = [
       district: "",
       village: "",
     },
-  },
-];
-
-export const navItems = [
-  {
-    label: "Overview",
-    link: "/author",
-  },
-  {
-    label: "Editor",
-    link: "/author/editor",
-  },
-  {
-    label: "Media",
-    link: "/author/media",
-  },
-  {
-    label: "Activity",
-    link: "/author/activity",
-  },
-  {
-    label: "Chat",
-    link: "/author/chat",
-  },
-  {
-    label: "Analytics",
-    link: "/author/analytics",
-  },
-  {
-    label: "Support",
-    link: "/author/support",
-  },
-  {
-    label: "Settings",
-    link: "/author/settings",
   },
 ];
